@@ -1,26 +1,31 @@
+const updateDaysToSell = ({ daysToSell, name, quality }) => {
+  return daysToSell - 1;
+};
+
+const updateQuality = ({ daysToSell, name, quality }) => {
+  let updatedQuality;
+
+  if (name === "Aged Brie") {
+    updatedQuality = quality + 1;
+  } else if (daysToSell > 0) {
+    // quality decrease
+    updatedQuality = quality - 1;
+  } else {
+    // once the limit date is past, quality decreases twice as fast
+    updatedQuality = quality - 2;
+  }
+  // quality should never be under 0
+  if (updatedQuality < 0) newQuality = 0;
+
+  return updatedQuality;
+};
+
 module.exports = {
   updateQuality: (items) => {
-    return items.map((item) => {
-      let updatedItem = item;
-
-      // limit date
-      updatedItem.daysToSell = item.daysToSell - 1;
-
-      // specific case : Aged Brie
-      if (item.name === "Aged Brie") {
-        updatedItem.quality = item.quality + 1;
-      } else if (item.daysToSell > 0) {
-        // quality decrease
-        updatedItem.quality = item.quality - 1;
-      } else {
-        // once the limit date is past, quality decreases twice as fast
-        updatedItem.quality = item.quality - 2;
-      }
-
-      // quality should never be under 0
-      if (updatedItem.quality < 0) updatedItem.quality = 0;
-
-      return updatedItem;
-    });
+    return items.map((item) => ({
+      ...item,
+      daysToSell: updateDaysToSell(item),
+      quality: updateQuality(item),
+    }));
   },
 };

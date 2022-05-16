@@ -39,14 +39,21 @@ Faites un commit par exercice.
 
 ### Exercice 1 : la qualité d’un article n'est jamais supérieure à 50
 
-Ajouter dans le fichier `shop.js` le code correspondant permettant de vérifier la contrainte suivante: la qualité d’un article n'est jamais supérieure à 50
+Ajouter dans le fichier `shop.js` le code correspondant permettant de vérifier la contrainte suivante:
+
+- la qualité d’un article n'est jamais supérieure à 50.
+
 Le test correspondant est déjà écrit dans `shop.spec.js` et il est commenté.
 Dé-commentez ce test.
 Une fois votre code écrit, ce test doit passer.
 
 ### Exercice 2 : l'article "Sulfuras"
 
-Ajouter dans le fichier `shop.js` le code correspondant permettant de vérifier la contrainte suivante: l'article "Sulfuras" n'a pas de date limite, et sa qualité est toujours égale à 80.
+Ajouter dans le fichier `shop.js` le code correspondant permettant de vérifier les contraintes suivantes:
+
+- l'article "Sulfuras" n'a pas de date limite
+- sa qualité est toujours égale à 80
+
 Les tests correspondants sont déjà écrits dans `shop.spec.js` et ils sont commentés.
 Dé-commentez ces tests.
 Une fois votre code écrit, ces tests doivent passer.
@@ -58,17 +65,22 @@ Ajouter dans le fichier `shop.js` le code correspondant permettant de vérifier 
 - tombe à zéro quand le nombre de jours avant la date d'expiration est inférieur à 0 (quand le concert est passé)
 - augmente chaque jour de 3 quand le nombre de jours avant la date d'expiration est inférieur ou égal à 5
 - augmente chaque jour de 2 quand le nombre de jours avant la date d'expiration est inférieur ou égal à 10
-  Le test correspondant est déjà écrit dans `shop.spec.js` et il est commenté.
-  Dé-commentez ce test.
-  Une fois votre code écrit, ce test doit passer.
 
-### Exercice 4 : l'article "Conjured"
+Les tests correspondants sont déjà écrits dans `shop.spec.js` et ils sont commentés.
+Dé-commentez ces tests.
+Une fois votre code écrit, ces tests doivent passer.
+
+### Exercice 4 : test de l'article "Conjured"
 
 Ajouter dans le fichier `shop.spec.js` :
 
 - un 9ème article qui a pour nom "Conjured", une qualité égale à 12, et un nombre de jours avant expiration égal à 8
 - un test qui vérifie que la qualité de cet article décroit de 2 chaque jour. Dans un premier temps, ce test ne passera pas, c'est normal puisque vous n'avez pas encore écrit le code correspondant dans `shop.js`
 
-Ajoutez ensuite le code permettant de faire passer ce test dans `shop.js`
+### Exercice 5 : l'article "Conjured"
+
+Ajoutez dans `shop.js` le code permettant de faire passer le test écrit dans l'exercice 4.
+
+### Conclusion
 
 Bravo, vous avez terminé !
