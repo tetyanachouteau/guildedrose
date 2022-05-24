@@ -117,7 +117,7 @@ describe("Gilded Rose", function () {
         expect(items[1].daysToSell).toEqual(0);
       });
     });
-    /*describe("Backstage passes", () => {
+    describe("Backstage passes", () => {
       it("quality should drop to zero after limit date", function () {
         let items = [item8];
         // + 6 days
@@ -157,6 +157,6 @@ describe("Gilded Rose", function () {
         items = updateQuality(items);
         expect(items[0].quality).toEqual(47);
       });
-    });*/
+    });
   });
 });
