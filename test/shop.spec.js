@@ -70,7 +70,7 @@ describe("Gilded Rose", function () {
       expect(items[0].quality).toEqual(18);
     });
 
-    /*it("quality should never be greater than 50", function () {
+    it("quality should never be greater than 50", function () {
       let items = [item7];
       // + 1 day
       items = updateQuality(items);
@@ -78,7 +78,7 @@ describe("Gilded Rose", function () {
       // + 1 day
       items = updateQuality(items);
       expect(items[0].quality).toEqual(50);
-    });*/
+    });
   });
   describe("specific items", () => {
     describe("Aged Brie", () => {

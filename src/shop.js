@@ -17,6 +17,9 @@ const updateQuality = ({ daysToSell, name, quality }) => {
   // quality should never be under 0
   if (updatedQuality < 0) newQuality = 0;
 
+  // quality should never be over 50
+  if (updatedQuality > 50) updatedQuality = 50;
+
   return updatedQuality;
 };
 
