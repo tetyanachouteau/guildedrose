@@ -11,7 +11,18 @@ const updateQuality = ({ daysToSell, name, quality }) => {
 
   if (name === "Aged Brie") {
     updatedQuality = quality + 1;
-  } else if (daysToSell > 0) {
+  } 
+  else if (name === "Backstage passes to a TAFKAL80ETC concert"){
+     // quality for backstage to zero when expired
+     if(daysToSell <= 0) updatedQuality = 0; 
+     // quality decrease by 3 when expiration less than 5 days
+     else if(daysToSell <= 5) updatedQuality = quality - 3;
+     // quality decrease by 2 when expiration greater than 5 days and less than 10
+     else if(daysToSell > 5 && daysToSell <= 10 ) updatedQuality = quality - 2;
+     // quality decrease by 2 when expiration greater than 5 days and less than 10
+     else updatedQuality = quality -1 ;
+  } 
+  else if (daysToSell > 0) {
     // quality decrease
     updatedQuality = quality - 1;
   } else {
