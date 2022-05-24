@@ -35,7 +35,7 @@ describe("Gilded Rose", function () {
     };
     item7 = {
       daysToSell: 10,
-      name: "Backstage passes to a TAFKAL80ETC concert",
+      name: "Aged Brie",
       quality: 49,
     };
     item8 = {
