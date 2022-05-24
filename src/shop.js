@@ -37,8 +37,8 @@ const updateQuality = ({ daysToSell, name, quality }) => {
 
   // quality should never be over 80
   if (name==="Sulfuras, Hand of Ragnaros") updatedQuality = 80;
-
-  return updatedQuality;
+  // 
+ return updatedQuality;
 };
 
 module.exports = {

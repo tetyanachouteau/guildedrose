@@ -43,6 +43,11 @@ describe("Gilded Rose", function () {
       name: "Backstage passes to a TAFKAL80ETC concert",
       quality: 49,
     };
+    item9 = {
+      daysToSell: 8,
+      name: "Conjured",
+      quality: 12,
+    };
   });
   describe("all items", () => {
     it("daysToSell should decrease by 1 every day", function () {
@@ -156,6 +161,17 @@ describe("Gilded Rose", function () {
         // + 1 day
         items = updateQuality(items);
         expect(items[0].quality).toEqual(47);
+      });
+    });
+    describe("quality of Conjured", () => {
+      it("quality of Conjured should decrease by 2 each day", function () {
+        let items = [item9];
+        // + 1 day
+        items = updateQuality(items);
+        expect(items[0].quality).toEqual(10);
+        // + 1 day
+        items = updateQuality(items);
+        expect(items[0].quality).toEqual(8);
       });
     });
   });
