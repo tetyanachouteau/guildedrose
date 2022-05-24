@@ -1,5 +1,9 @@
 const updateDaysToSell = ({ daysToSell, name, quality }) => {
-  return daysToSell - 1;
+  //Sulfite...Days not de...
+  if (name==="Sulfuras, Hand of Ragnaros")
+    return 0;
+  else 
+    return daysToSell - 1;
 };
 
 const updateQuality = ({ daysToSell, name, quality }) => {
@@ -19,6 +23,9 @@ const updateQuality = ({ daysToSell, name, quality }) => {
 
   // quality should never be over 50
   if (updatedQuality > 50) updatedQuality = 50;
+
+  // quality should never be over 80
+  if (name==="Sulfuras, Hand of Ragnaros") updatedQuality = 80;
 
   return updatedQuality;
 };

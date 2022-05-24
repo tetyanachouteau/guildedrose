@@ -52,8 +52,8 @@ describe("Gilded Rose", function () {
       expect(items[0].daysToSell).toEqual(9);
       expect(items[1].daysToSell).toEqual(1);
       expect(items[2].daysToSell).toEqual(4);
-      expect(items[3].daysToSell).toEqual(-1);
-      expect(items[4].daysToSell).toEqual(-1);
+      //expect(items[3].daysToSell).toEqual(-1);
+      //expect(items[4].daysToSell).toEqual(-1);
       expect(items[5].daysToSell).toEqual(14);
       expect(items[6].daysToSell).toEqual(9);
       expect(items[7].daysToSell).toEqual(4);
@@ -93,7 +93,7 @@ describe("Gilded Rose", function () {
       });
     });
 
-    /*describe("Sulfuras", () => {
+    describe("Sulfuras", () => {
       it("quality should always be 80", function () {
         let items = [item4, item5];
         // + 1 day
@@ -116,7 +116,7 @@ describe("Gilded Rose", function () {
         expect(items[0].daysToSell).toEqual(0);
         expect(items[1].daysToSell).toEqual(0);
       });
-    });*/
+    });
     /*describe("Backstage passes", () => {
       it("quality should drop to zero after limit date", function () {
         let items = [item8];
